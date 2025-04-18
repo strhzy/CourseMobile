@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DnDPartyManagerMobile", "DnDPartyManagerMobile.csproj", "{10784822-9BE6-432E-AACA-E30EF72CD70B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{10784822-9BE6-432E-AACA-E30EF72CD70B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10784822-9BE6-432E-AACA-E30EF72CD70B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10784822-9BE6-432E-AACA-E30EF72CD70B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10784822-9BE6-432E-AACA-E30EF72CD70B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
