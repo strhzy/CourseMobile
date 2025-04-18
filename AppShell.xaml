@@ -4,12 +4,13 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DnDPartyManagerMobile"
+    xmlns:pages="clr-namespace:DnDPartyManagerMobile.V"
     Shell.FlyoutBehavior="Flyout"
     Title="DnDPartyManagerMobile">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellContent 
+        Title="Enemies" 
+        ContentTemplate="{DataTemplate pages:EnemyPage}" 
+        Route="enemies" />
 
 </Shell>

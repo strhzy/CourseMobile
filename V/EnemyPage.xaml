@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DnDPartyManagerMobile.V"
+             xmlns:controls="clr-namespace:DnDPartyManagerMobile.V.UserControls"
+             x:Class="DnDPartyManagerMobile.V.EnemyPage"
+             Title="Enemies">
+    
+    <Grid RowDefinitions="Auto, *, Auto"
+          ColumnDefinitions="*, 10*, *"
+          Padding="10">
+        
+        <HorizontalStackLayout Grid.Row="0" Grid.Column="1"
+                              HorizontalOptions="Center"
+                              Spacing="5">
+            <Entry WidthRequest="100"
+                   Text="{Binding Search}"
+                   Placeholder="Search..."
+                   HorizontalOptions="FillAndExpand"/>
+            <Button Text="Search"
+                    Padding="10,0"
+                    Command="{Binding LoadEnemiesCommand}"/>
+        </HorizontalStackLayout>
+        
+        <!-- Enemies List -->
+        <CollectionView Grid.Row="1" Grid.Column="1"
+                       ItemsSource="{Binding Enemies}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <VerticalStackLayout>
+                        <controls:Enemy/>
+                    </VerticalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        
+        <!-- Pagination -->
+        <Grid Grid.Row="2" Grid.Column="1"
+              ColumnDefinitions="*, *, *">
+            <Button Grid.Column="0" 
+                    Text="&lt;"
+                    Command="{Binding PrevPageCommand}"
+                    Margin="15"/>
+            <Label Grid.Column="1" 
+                   Text="{Binding CurrentPage}"
+                   FontSize="20"
+                   HorizontalOptions="Center"/>
+            <Button Grid.Column="2" 
+                    Text="&gt;"
+                    Command="{Binding NextPageCommand}"
+                    Margin="15"/>
+        </Grid>
+    </Grid>
+</ContentPage>
