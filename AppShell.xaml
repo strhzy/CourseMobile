@@ -13,4 +13,5 @@
         ContentTemplate="{DataTemplate pages:EnemyPage}" 
         Route="enemies" />
 
+    
 </Shell>

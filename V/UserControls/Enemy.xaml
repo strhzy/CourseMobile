@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DnDPartyManagerMobile.V.UserControls.Enemy"
+             xmlns:vm="clr-namespace:DnDPartyManagerMobile.VM"
+             x:Name="this"
+             MaximumWidthRequest="600">
+    
+    <Grid RowDefinitions="Auto, *, Auto">
+        <!-- Основная информация (всегда видима) -->
+        <VerticalStackLayout>
+            <HorizontalStackLayout>
+                <Label Text="Имя: " FontSize="20" FontAttributes="Bold"/>
+                <Label Text="{Binding Name}" FontSize="20" FontAttributes="Bold"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout>
+                <Label Text="Размер: " FontSize="17.5"/>
+                <Label Text="{Binding Size}" FontSize="17.5"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout>
+                <Label Text="ХП: " FontSize="17.5"/>
+                <Label Text="{Binding Hit_points}" FontSize="17.5"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <!-- Дополнительная информация (скрыта/раскрывается) -->
+        <VerticalStackLayout 
+            Grid.Row="1" 
+            x:Name="detailsPanel"
+            IsVisible="False">
+            
+            <!-- Основные характеристики -->
+            <HorizontalStackLayout>
+                <Label Text="Описание: " FontSize="17.5"/>
+                <Label Text="{Binding Desc}" FontSize="17.5"/>
+            </HorizontalStackLayout>
+            
+            <HorizontalStackLayout>
+                <Label Text="Тип: " FontSize="17.5"/>
+                <Label Text="{Binding Type}" FontSize="17.5"/>
+            </HorizontalStackLayout>
+            
+            <!-- Добавьте остальные свойства по аналогии -->
+            <!-- ... -->
+            
+            <!-- Списки действий и способностей -->
+            <Label Text="Действия:" FontSize="17.5" FontAttributes="Bold"/>
+            <CollectionView ItemsSource="{Binding Actions}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="LightSlateGray" Padding="8" Margin="0,2">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" FontSize="17.5"/>
+                                <Label Text="{Binding Description}" FontSize="17.5"/>
+                                <Label Text="{Binding AttackBonus}" FontSize="17.5"/>
+                                <Label Text="{Binding DamageDice}" FontSize="17.5"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <!-- Бонусные действия -->
+            <Label Text="Бонусные действия:" FontSize="17.5" FontAttributes="Bold"/>
+            <CollectionView ItemsSource="{Binding Bonus_actions}">
+                <!-- Аналогичный шаблон как для Actions -->
+            </CollectionView>
+            
+            <!-- Реакции -->
+            <Label Text="Реакции:" FontSize="17.5" FontAttributes="Bold"/>
+            <CollectionView ItemsSource="{Binding Reactions}">
+                <!-- Аналогичный шаблон -->
+            </CollectionView>
+            
+            <!-- Легендарные действия -->
+            <Label Text="Легендарные действия:" FontSize="17.5" FontAttributes="Bold"/>
+            <CollectionView ItemsSource="{Binding Legendary_actions}">
+                <!-- Аналогичный шаблон -->
+            </CollectionView>
+            
+            <!-- Особые способности -->
+            <Label Text="Особые способности:" FontSize="17.5" FontAttributes="Bold"/>
+            <CollectionView ItemsSource="{Binding Special_abilities}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="LightSlateGray" Padding="8" Margin="0,2">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" FontSize="17.5"/>
+                                <Label Text="{Binding Desc}" FontSize="17.5"/>
+                            </VerticalStackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+
+        <!-- Кнопка развернуть/свернуть -->
+        <Button 
+            Grid.Row="2" 
+            x:Name="toggleButton"
+            Text="Развернуть"
+            Clicked="OnToggleButtonClicked"/>
+    </Grid>
+</ContentView>
