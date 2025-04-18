@@ -17,16 +17,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ddf9e70-8277-4b1e-8905-deb2db82a19d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/V/CharacterPage.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V/CharacterPage.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V/UserControls/Character.xaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/V/UserControls/Character.xaml.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VM/PlayerCharactersViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Converters/AbilityScoreToModifierConverter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/S/CharacterService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/S/ICharacterService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VM/CharacterViewModel.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VM/CharactersPageViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DnDPartyManagerMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DnDPartyManagerMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AppShell.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/AppShell.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DnDPartyManagerMobile.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/DnDPartyManagerMobile.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V/UserControls/Enemy.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/V/UserControls/Enemy.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VM/EnemiesViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VM/EnemiesViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V/CharacterPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/V/CharacterPage.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V/UserControls/Character.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/V/UserControls/CharacterCard.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/V/UserControls/Character.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/V/UserControls/CharacterCard.xaml.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VM/PlayerCharactersViewModel.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,7 +149,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744994711526</updated>
       <workItem from="1744994712867" duration="3648000" />
-      <workItem from="1744998408558" duration="2184000" />
+      <workItem from="1744998408558" duration="5181000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -183,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744997257014</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="поиск врагов сделан">
+      <option name="closed" value="true" />
+      <created>1745000879984</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745000879984</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,7 +216,8 @@
     <MESSAGE value="init 2" />
     <MESSAGE value="minor" />
     <MESSAGE value="minor 18.04 20:27" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor 18.04 20:27" />
+    <MESSAGE value="поиск врагов сделан" />
+    <option name="LAST_COMMIT_MESSAGE" value="поиск врагов сделан" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

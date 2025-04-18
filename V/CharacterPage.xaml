@@ -1,19 +1,18 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+﻿<!-- CharactersPage.xaml -->
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:DnDPartyManagerMobile.V.UserControls"
              x:Class="DnDPartyManagerMobile.V.CharacterPage">
-    <ContentPage.Content>
-        
-        <CollectionView Grid.Row="1" Grid.Column="1"
-                        ItemsSource="{Binding Characters}">
+    
+    <RefreshView IsRefreshing="{Binding IsRefreshing}"
+                 Command="{Binding LoadCharactersCommand}">
+        <CollectionView ItemsSource="{Binding Characters}"
+                        SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <VerticalStackLayout>
-                        <controls:Character/>
-                    </VerticalStackLayout>
+                    <controls:CharacterCard Margin="10"/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </ContentPage.Content>
+    </RefreshView>
 </ContentPage>

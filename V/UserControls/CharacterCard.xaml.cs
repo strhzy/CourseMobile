@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace DnDPartyManagerMobile.V.UserControls;
 
-public partial class Character : ContentView
+public partial class CharacterCard : ContentView
 {
-    public Character()
+    public CharacterCard()
     {
         InitializeComponent();
     }

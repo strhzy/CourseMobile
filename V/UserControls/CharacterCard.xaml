@@ -1,0 +1,165 @@
+﻿<!-- CharacterCard.xaml -->
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:DnDPartyManagerMobile.Converters"
+             x:Class="DnDPartyManagerMobile.V.UserControls.CharacterCard"
+             x:Name="RootView">
+    
+    <ContentView.Resources>
+        <converters:AbilityScoreToModifierConverter x:Key="AbilityConverter"/>
+    </ContentView.Resources>
+
+    <Border Stroke="#DDD" StrokeShape="RoundRectangle 10" Padding="10">
+        <Grid ColumnDefinitions="*,2*,*" RowDefinitions="Auto,Auto,Auto,Auto">
+            
+            <Border Grid.ColumnSpan="3" Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                <Grid ColumnDefinitions="*,2*" RowDefinitions="Auto,Auto">
+                    <VerticalStackLayout Grid.Column="0" Padding="5">
+                        <Entry Text="{Binding PlayerCharacter.Name}" 
+                               Placeholder="Имя персонажа"/>
+                        <Label Text="Имя персонажа" FontSize="Micro"/>
+                    </VerticalStackLayout>
+                    
+                    <Border Grid.Column="1" Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                        <Grid ColumnDefinitions="*,*,Auto,Auto" RowDefinitions="Auto,Auto">
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                                <Entry Text="{Binding PlayerCharacter.ClassType}" FontSize="12"/>
+                                <Label Text="Класс" FontSize="Micro"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                                <Entry Text="{Binding PlayerCharacter.Race}" FontSize="12"/>
+                                <Label Text="Класс" FontSize="Micro"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                                <Entry Text="{Binding PlayerCharacter.Background}" FontSize="12"/>
+                                <Label Text="Класс" FontSize="Micro"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                                <Entry Text="{Binding PlayerCharacter.Alignment}" FontSize="12"/>
+                                <Label Text="Класс" FontSize="Micro"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                                <Entry Text="{Binding PlayerCharacter.PlayerName}" FontSize="12"/>
+                                <Label Text="Класс" FontSize="Micro"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                                <Entry Text="{Binding PlayerCharacter.ExperiencePoints}" FontSize="12"/>
+                                <Label Text="Класс" FontSize="Micro"/>
+                            </VerticalStackLayout>
+                            <VerticalStackLayout Grid.Row="0" Grid.Column="0" Padding="5">
+                                <Entry Text="{Binding PlayerCharacter.Level}" FontSize="12"/>
+                                <Label Text="Класс" FontSize="Micro"/>
+                            </VerticalStackLayout>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+            <Border Grid.Row="1" Grid.Column="0" Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                <VerticalStackLayout Spacing="10" Padding="5">
+                    <Border Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="Сила" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding PlayerCharacter.Strength, 
+                                    Converter={StaticResource AbilityConverter}}" 
+                                   FontSize="Title" HorizontalOptions="Center"/>
+                            <Entry Text="{Binding PlayerCharacter.Strength}" 
+                                   WidthRequest="40" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="Ловкость" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding PlayerCharacter.Dexterity, 
+                                    Converter={StaticResource AbilityConverter}}" 
+                                   FontSize="Title" HorizontalOptions="Center"/>
+                            <Entry Text="{Binding PlayerCharacter.Dexterity}" 
+                                   WidthRequest="40" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="Телосложение" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding PlayerCharacter.Constitution, 
+                                    Converter={StaticResource AbilityConverter}}" 
+                                   FontSize="Title" HorizontalOptions="Center"/>
+                            <Entry Text="{Binding PlayerCharacter.Constitution}" 
+                                   WidthRequest="40" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="Интеллект" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding PlayerCharacter.Intelligence, 
+                                    Converter={StaticResource AbilityConverter}}" 
+                                   FontSize="Title" HorizontalOptions="Center"/>
+                            <Entry Text="{Binding PlayerCharacter.Intelligence}" 
+                                   WidthRequest="40" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="Мудрость" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding PlayerCharacter.Wisdom, 
+                                    Converter={StaticResource AbilityConverter}}" 
+                                   FontSize="Title" HorizontalOptions="Center"/>
+                            <Entry Text="{Binding PlayerCharacter.Wisdom}" 
+                                   WidthRequest="40" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                    
+                    <Border Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                        <VerticalStackLayout Padding="5">
+                            <Label Text="Харизма" FontAttributes="Bold" HorizontalOptions="Center"/>
+                            <Label Text="{Binding PlayerCharacter.Charisma, 
+                                    Converter={StaticResource AbilityConverter}}" 
+                                   FontSize="Title" HorizontalOptions="Center"/>
+                            <Entry Text="{Binding PlayerCharacter.Charisma}" 
+                                   WidthRequest="40" HorizontalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </Border>
+                </VerticalStackLayout>
+            </Border>
+            
+            <VerticalStackLayout Grid.Row="1" Grid.Column="1" Spacing="10">
+                <!-- Блок хитов -->
+                <Border Stroke="#AAA" StrokeShape="RoundRectangle 5">
+                    <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto">
+                        <VerticalStackLayout Grid.Column="0" Grid.RowSpan="2" Padding="5">
+                            <Label Text="Хиты" FontAttributes="Bold"/>
+                            <Entry Text="{Binding PlayerCharacter.CurrentHitPoints}" 
+                                   FontSize="Title" HorizontalOptions="Center"/>
+                            <Label Text="Текущие" FontSize="Micro"/>
+                        </VerticalStackLayout>
+                        
+                        <!-- Максимальные и временные хиты -->
+                    </Grid>
+                </Border>
+                
+                <!-- Навыки и спасброски -->
+                <CollectionView ItemsSource="{Binding Skills}">
+                    <!-- Шаблон для навыков -->
+                </CollectionView>
+            </VerticalStackLayout>
+
+            <!-- Правая колонка - черты характера, снаряжение -->
+            <VerticalStackLayout Grid.Row="1" Grid.Column="2" Spacing="10">
+                <Editor Text="{Binding PlayerCharacter.PersonalityTraits}" 
+                       HeightRequest="80" 
+                       Placeholder="Черты характера"/>
+                
+                <!-- Остальные элементы -->
+            </VerticalStackLayout>
+
+            <!-- Кнопки действий -->
+            <HorizontalStackLayout Grid.Row="3" Grid.ColumnSpan="3" 
+                                  HorizontalOptions="Center" Spacing="10">
+                <Button Text="Сохранить" Command="{Binding SaveCommand}"/>
+                <Button Text="Удалить" Command="{Binding DeleteCommand}"/>
+            </HorizontalStackLayout>
+        </Grid>
+    </Border>
+</ContentView>
