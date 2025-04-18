@@ -9,7 +9,12 @@
     Title="DnDPartyManagerMobile">
 
     <ShellContent 
-        Title="Enemies" 
+        Title="Персонажи" 
+        ContentTemplate="{DataTemplate pages:CharacterPage}" 
+        Route="characters" />
+    
+    <ShellContent 
+        Title="Враги" 
         ContentTemplate="{DataTemplate pages:EnemyPage}" 
         Route="enemies" />
 

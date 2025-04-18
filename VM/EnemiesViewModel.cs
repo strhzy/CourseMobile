@@ -28,12 +28,20 @@ public partial class EnemiesViewModel : ObservableObject
     {
         Enemies.Clear();
         var enemyList = await DBHelper.GetEnemiesAsync(CurrentPage, Search);
-        
-        foreach (var enem in enemyList)
+
+        if (enemyList.Count > 0)
         {
-            Enemies.Add(enem);
-            Console.WriteLine(Enemies.Count);
+            foreach (var enem in enemyList)
+            {
+                Enemies.Add(enem);
+                Console.WriteLine(Enemies.Count);
+            }
         }
+        else
+        {
+            await Shell.Current.DisplayAlert("Ошибка", "Ничего не найдено", "OK");
+        }
+        
     }
 
     [RelayCommand]

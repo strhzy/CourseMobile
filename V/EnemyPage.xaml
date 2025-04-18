@@ -15,9 +15,9 @@
                               Spacing="5">
             <Entry WidthRequest="100"
                    Text="{Binding Search}"
-                   Placeholder="Search..."
+                   Placeholder="Поиск..."
                    HorizontalOptions="FillAndExpand"/>
-            <Button Text="Search"
+            <Button Text="Искать"
                     Padding="10,0"
                     Command="{Binding LoadEnemiesCommand}"/>
         </HorizontalStackLayout>
