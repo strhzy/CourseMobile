@@ -12,12 +12,7 @@
                    Grid.Row="1"
                    Text="{Binding Ip, Mode=TwoWay}"
                    Placeholder="IP адрес"
-                   Keyboard="Numeric"
                    HorizontalOptions="FillAndExpand">
-                <Entry.Behaviors>
-                    <behaviors:RegexValidationBehavior RegexPattern="^\d{1,12}$"
-                                                       ValidationType="Ip"/>
-                </Entry.Behaviors>
             </Entry>
             <Entry WidthRequest="100"
                    Grid.Column="1"
@@ -31,7 +26,11 @@
                                                        ValidationType="Port"/>
                 </Entry.Behaviors>
             </Entry>
-            <Button Text="Тест подключения" Grid.Row="6" Grid.Column="1"></Button>
+            <Button Text="Тест подключения" 
+                    Grid.Row="4" 
+                    Grid.Column="1" 
+                    Command="{Binding ConnectToWebSocketCommand}"></Button>
+            <Label Text="{Binding ConnectionStatus}" FontSize="14" TextColor="Red"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

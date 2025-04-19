@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿using System.Diagnostics;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DnDPartyManagerMobile.S;
 
@@ -13,7 +14,7 @@ public partial class WebSocketViewModel : ObservableObject
     private string port = "8080";
 
     [ObservableProperty]
-    private string connectionStatus;
+    private string connectionStatus = "WebSocket не подключен";
 
     private readonly WebSocketService _webSocketService;
 
@@ -30,6 +31,7 @@ public partial class WebSocketViewModel : ObservableObject
         var ipParts = Ip.Split('.');
         bool isIpValid = ipParts.Length <= 4 && ipParts.All(p => int.TryParse(p, out int num) && num >= 0 && num <= 255);
         bool isPortValid = int.TryParse(Port, out int portNum) && portNum >= 0 && portNum <= 65535;
+        Debug.Print("123123123");
 
         if (!isIpValid || !isPortValid)
         {
