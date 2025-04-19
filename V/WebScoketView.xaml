@@ -2,17 +2,36 @@
 
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviors="clr-namespace:DnDPartyManagerMobile.Behaviors"
              x:Class="DnDPartyManagerMobile.V.WebScoketView">
     <ContentPage.Content>
         <Grid ColumnDefinitions="*,5*,*"
-              RowDefinitions="*,*,*,*,*">
+              RowDefinitions="*,*,*,*,*,*,*,*,*,*,*,*">
             <Entry WidthRequest="100"
                    Grid.Column="1"
                    Grid.Row="1"
-                   Text="{Binding Search}"
+                   Text="{Binding Ip, Mode=TwoWay}"
                    Placeholder="IP адрес"
-                   HorizontalOptions="FillAndExpand"/>
-            <Button Text="Тест подключения"></Button>
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:RegexValidationBehavior RegexPattern="^\d{1,12}$"
+                                                       ValidationType="Ip"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Entry WidthRequest="100"
+                   Grid.Column="1"
+                   Grid.Row="2"
+                   Text="{Binding Port, Mode=TwoWay}"
+                   Placeholder="Порт"
+                   Keyboard="Numeric"
+                   HorizontalOptions="FillAndExpand">
+                <Entry.Behaviors>
+                    <behaviors:RegexValidationBehavior RegexPattern="^\d{1,5}$"
+                                                       ValidationType="Port"/>
+                </Entry.Behaviors>
+            </Entry>
+            <Button Text="Тест подключения" Grid.Row="6" Grid.Column="1"></Button>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

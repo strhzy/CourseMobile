@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:DnDPartyManagerMobile.V"
              xmlns:controls="clr-namespace:DnDPartyManagerMobile.V.UserControls"
              x:Class="DnDPartyManagerMobile.V.EnemyPage"
-             Title="Enemies">
+             Title="Поиск врагов">
     
     <Grid RowDefinitions="Auto, *, Auto"
           ColumnDefinitions="*, 10*, *"

@@ -5,8 +5,7 @@
     <Border Stroke="#FF6200EE"
             StrokeThickness="2"
             StrokeShape="RoundRectangle 10"
-            Padding="10"
-            BackgroundColor="#FFF5F5F5">
+            Padding="10">
         <Border.GestureRecognizers>
             <TapGestureRecognizer Command="{Binding Source={x:Reference RootView}, Path=CardTappedCommand}"
                                   CommandParameter="{Binding .}" />

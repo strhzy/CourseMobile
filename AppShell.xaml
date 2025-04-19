@@ -11,7 +11,7 @@
     Title="DnDPartyManagerMobile">
 
     <ShellContent 
-        Title="Персонажи" 
+        Title="Мои персонажи" 
         ContentTemplate="{DataTemplate views:CharacterPage}" 
         Route="characters" />
     
