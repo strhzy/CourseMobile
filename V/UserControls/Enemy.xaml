@@ -3,9 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="DnDPartyManagerMobile.V.UserControls.Enemy"
              xmlns:vm="clr-namespace:DnDPartyManagerMobile.VM"
-             x:Name="this"
-             MaximumWidthRequest="600">
-    
+             x:Name="this">
+
     <Grid RowDefinitions="Auto, *, Auto">
         <VerticalStackLayout>
             <HorizontalStackLayout>
@@ -42,14 +41,14 @@
             <CollectionView ItemsSource="{Binding Actions}">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BackgroundColor="LightSlateGray" Padding="8" Margin="0,2">
+                        <Border BackgroundColor="LightSlateGray" Padding="8" Margin="0,2">
                             <VerticalStackLayout>
                                 <Label Text="{Binding Name}" FontSize="17.5" LineBreakMode="WordWrap"/>
                                 <Label Text="{Binding Description}" FontSize="17.5" LineBreakMode="WordWrap"/>
                                 <Label Text="{Binding AttackBonus}" FontSize="17.5" LineBreakMode="WordWrap"/>
                                 <Label Text="{Binding DamageDice}" FontSize="17.5" LineBreakMode="WordWrap"/>
                             </VerticalStackLayout>
-                        </Frame>
+                        </Border>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
             </CollectionView>
@@ -59,10 +58,34 @@
             </CollectionView>
             <Label Text="Реакции:" FontSize="17.5" FontAttributes="Bold"/>
             <CollectionView ItemsSource="{Binding Reactions}">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Border BackgroundColor="LightSlateGray" Padding="8" Margin="0,2">
+                            <VerticalStackLayout>
+                                <Label Text="{Binding Name}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                                <Label Text="{Binding Description}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                                <Label Text="{Binding AttackBonus}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                                <Label Text="{Binding DamageDice}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                            </VerticalStackLayout>
+                        </Border>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
             </CollectionView>
             <Label Text="Легендарные действия:" FontSize="17.5" FontAttributes="Bold"/>
-            <CollectionView ItemsSource="{Binding Legendary_actions}">
-            </CollectionView>
+                <CollectionView ItemsSource="{Binding Legendary_actions}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Border BackgroundColor="LightSlateGray" Padding="8" Margin="0,2">
+                                <VerticalStackLayout>
+                                    <Label Text="{Binding Name}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding Description}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding AttackBonus}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                                    <Label Text="{Binding DamageDice}" FontSize="17.5" LineBreakMode="WordWrap"/>
+                                </VerticalStackLayout>
+                            </Border>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
 
             <Label Text="Особые способности:" FontSize="17.5" FontAttributes="Bold"/>
             <CollectionView ItemsSource="{Binding Special_abilities}">
@@ -85,4 +108,5 @@
             Text="Развернуть"
             Clicked="OnToggleButtonClicked"/>
     </Grid>
+    
 </ContentView>

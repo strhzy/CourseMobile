@@ -1,13 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Maui.Controls;
+using System.Windows.Input;
 
-namespace DnDPartyManagerMobile.V.UserControls;
+namespace DnDPartyManagerMobile.Views;
 
 public partial class CharacterCard : ContentView
 {
+    public static readonly BindableProperty CardTappedCommandProperty =
+        BindableProperty.Create(nameof(CardTappedCommand), typeof(ICommand), typeof(CharacterCard));
+
+    public ICommand CardTappedCommand
+    {
+        get => (ICommand)GetValue(CardTappedCommandProperty);
+        set => SetValue(CardTappedCommandProperty, value);
+    }
+
     public CharacterCard()
     {
         InitializeComponent();

@@ -1,0 +1,292 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DnDPartyManagerMobile.Views.CharacterDetailsPage"
+             Title="Детали персонажа">
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+            <!-- Основная информация -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Основная информация" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Имя: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Name}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Игрок: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.PlayerName}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Класс: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.ClassType}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Уровень: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Level}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Раса: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Race}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Мировоззрение: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Alignment}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Предыстория: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Background}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Очки опыта: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.ExperiencePoints}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Характеристики -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Характеристики" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Сила: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Strength}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Ловкость: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Dexterity}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Телосложение: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Constitution}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Интеллект: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Intelligence}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Мудрость: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Wisdom}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Харизма: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Charisma}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Спасброски -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Спасброски" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Сила: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SavingThrowStrength}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Ловкость: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SavingThrowDexterity}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Телосложение: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SavingThrowConstitution}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Интеллект: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SavingThrowIntelligence}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Мудрость: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SavingThrowWisdom}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Харизма: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SavingThrowCharisma}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Навыки -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Навыки" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Акробатика: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Acrobatics}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Обращение с животными: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.AnimalHandling}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Аркана: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Arcana}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Атлетика: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Athletics}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Обман: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Deception}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="История: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.History}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Проницательность: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Insight}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Запугивание: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Intimidation}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Расследование: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Investigation}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Медицина: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Medicine}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Природа: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Nature}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Восприятие: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Perception}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Выступление: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Performance}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Убеждение: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Persuasion}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Религия: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Religion}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Ловкость рук: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SleightOfHand}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Скрытность: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Stealth}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Выживание: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Survival}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Боевая информация -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Боевая информация" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Класс брони: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.ArmorClass}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Инициатива: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Initiative}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Скорость: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Speed}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Макс. хиты: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.MaxHitPoints}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Текущие хиты: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.CurrentHitPoints}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Врем. хиты: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.TemporaryHitPoints}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Кубы хитов: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.HitDice}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Монеты -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Монеты" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Медные: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.CopperPieces}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Серебряные: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.SilverPieces}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Электрумовые: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.ElectrumPieces}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Золотые: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.GoldPieces}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Платиновые: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.PlatinumPieces}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Личностные характеристики -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Личностные характеристики" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Черты характера: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.PersonalityTraits}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Идеалы: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Ideals}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Привязанности: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Bonds}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Слабости: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Flaws}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+
+            <!-- Дополнительно -->
+            <Frame BorderColor="#FF6200EE" CornerRadius="10" Padding="10">
+                <VerticalStackLayout Spacing="5">
+                    <Label Text="Дополнительно" FontSize="18" FontAttributes="Bold"/>
+                    <HorizontalStackLayout>
+                        <Label Text="Особенности и черты: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.FeaturesAndTraits}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Снаряжение: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.Equipment}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                    <HorizontalStackLayout>
+                        <Label Text="Владения и языки: " FontSize="16" FontAttributes="Bold" WidthRequest="150"/>
+                        <Label Text="{Binding Character.ProficienciesAndLanguages}" FontSize="16"/>
+                    </HorizontalStackLayout>
+                </VerticalStackLayout>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

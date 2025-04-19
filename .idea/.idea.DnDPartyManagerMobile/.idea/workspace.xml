@@ -17,16 +17,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ddf9e70-8277-4b1e-8905-deb2db82a19d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Converters/AbilityScoreToModifierConverter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/S/CharacterService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/S/ICharacterService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VM/CharacterViewModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VM/CharactersPageViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.DnDPartyManagerMobile/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DnDPartyManagerMobile/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V/CharacterPage.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/V/CharacterPage.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V/UserControls/Character.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/V/UserControls/CharacterCard.xaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/V/UserControls/Character.xaml.cs" beforeDir="false" afterPath="$PROJECT_DIR$/V/UserControls/CharacterCard.xaml.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VM/PlayerCharactersViewModel.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,12 +36,12 @@
     &quot;assignee&quot;: &quot;strhzy&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/strhzy/CourseDesktop.git&quot;,
-    &quot;accountId&quot;: &quot;906cb23e-7d9d-418e-b739-98d670a5da89&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/strhzy/CourseMobile.git",
+    "accountId": "906cb23e-7d9d-418e-b739-98d670a5da89"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="mock://D:/sharaga/coursework/DnDPartyManagerMobile/AppShell.xaml" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -149,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744994711526</updated>
       <workItem from="1744994712867" duration="3648000" />
-      <workItem from="1744998408558" duration="5181000" />
+      <workItem from="1744998408558" duration="6240000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <option name="closed" value="true" />
@@ -191,7 +182,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745000879984</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="зачатки отображения персонажей">
+      <option name="closed" value="true" />
+      <created>1745003902033</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1745003902033</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -217,7 +216,8 @@
     <MESSAGE value="minor" />
     <MESSAGE value="minor 18.04 20:27" />
     <MESSAGE value="поиск врагов сделан" />
-    <option name="LAST_COMMIT_MESSAGE" value="поиск врагов сделан" />
+    <MESSAGE value="зачатки отображения персонажей" />
+    <option name="LAST_COMMIT_MESSAGE" value="зачатки отображения персонажей" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

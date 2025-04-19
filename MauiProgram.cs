@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Logging;
+using Microsoft.Maui.Controls.Hosting;
 
 namespace DnDPartyManagerMobile;
 
@@ -18,6 +19,9 @@ public static class MauiProgram
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
+
+        builder.Services.AddTransient<Views.CharacterPage>();
+        builder.Services.AddTransient<Views.CharacterDetailsPage>();
 
         return builder.Build();
     }

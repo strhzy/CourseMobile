@@ -73,4 +73,17 @@
       <Folder Include="M\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <MauiXaml Update="V\CharacterDetailsPage.xaml">
+        <SubType>Designer</SubType>
+      </MauiXaml>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="V\CharacterDetailsPage.xaml.cs">
+        <DependentUpon>CharacterDetailsPage.xaml</DependentUpon>
+        <SubType>Code</SubType>
+      </Compile>
+    </ItemGroup>
+
 </Project>

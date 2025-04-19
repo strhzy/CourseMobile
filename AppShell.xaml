@@ -5,18 +5,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:local="clr-namespace:DnDPartyManagerMobile"
     xmlns:pages="clr-namespace:DnDPartyManagerMobile.V"
+    xmlns:userControls="clr-namespace:DnDPartyManagerMobile.V.UserControls"
+    xmlns:views="clr-namespace:DnDPartyManagerMobile.Views"
     Shell.FlyoutBehavior="Flyout"
     Title="DnDPartyManagerMobile">
 
     <ShellContent 
         Title="Персонажи" 
-        ContentTemplate="{DataTemplate pages:CharacterPage}" 
+        ContentTemplate="{DataTemplate views:CharacterPage}" 
         Route="characters" />
     
     <ShellContent 
         Title="Враги" 
         ContentTemplate="{DataTemplate pages:EnemyPage}" 
         Route="enemies" />
-
     
+    <ShellContent 
+        Title="Подключение" 
+        ContentTemplate="{DataTemplate pages:WebScoketView}" 
+        Route="webscoket" />
 </Shell>

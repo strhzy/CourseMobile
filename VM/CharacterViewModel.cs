@@ -1,29 +1,16 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
 using DnDPartyManagerMobile.M;
-using DnDPartyManagerMobile.Services;
 
-namespace DnDPartyManagerMobile.VM;
+namespace DnDPartyManagerMobile.ViewModels;
 
 public partial class CharacterViewModel : ObservableObject
 {
-    [ObservableProperty]
-    private PlayerCharacter playerCharacter;
-    
+    private readonly PlayerCharacter _character;
+
+    public PlayerCharacter Character => _character;
+
     public CharacterViewModel(PlayerCharacter character)
     {
-        PlayerCharacter = character;
-    }
-    
-    [RelayCommand]
-    private async Task Save()
-    {
-        await CharacterService.SaveCharacterAsync(PlayerCharacter);
-    }
-    
-    [RelayCommand]
-    private async Task Delete()
-    {
-        await CharacterService.DeleteCharacterAsync(PlayerCharacter.Id);
+        _character = character;
     }
 }

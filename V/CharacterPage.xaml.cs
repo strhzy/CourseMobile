@@ -1,15 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using DnDPartyManagerMobile.ViewModels;
 
-namespace DnDPartyManagerMobile.V;
+namespace DnDPartyManagerMobile.Views;
 
 public partial class CharacterPage : ContentPage
 {
     public CharacterPage()
     {
         InitializeComponent();
+        BindingContext = new CharactersPageViewModel();
     }
 }

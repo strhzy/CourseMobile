@@ -1,16 +1,17 @@
-﻿<!-- CharactersPage.xaml -->
-<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:controls="clr-namespace:DnDPartyManagerMobile.V.UserControls"
-             x:Class="DnDPartyManagerMobile.V.CharacterPage">
-    
+             xmlns:views="clr-namespace:DnDPartyManagerMobile.Views"
+             x:Class="DnDPartyManagerMobile.Views.CharacterPage"
+             Title="Персонажи">
     <RefreshView IsRefreshing="{Binding IsRefreshing}"
                  Command="{Binding LoadCharactersCommand}">
         <CollectionView ItemsSource="{Binding Characters}"
                         SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <controls:CharacterCard Margin="10"/>
+                    <views:CharacterCard Margin="10"
+                                         BindingContext="{Binding .}"
+                                         CardTappedCommand="{Binding Source={RelativeSource AncestorType={x:Type ContentPage}}, Path=BindingContext.CardTappedCommand}"/>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
