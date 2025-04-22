@@ -27,21 +27,25 @@ public partial class EnemiesViewModel : ObservableObject
     private async Task LoadEnemies()
     {
         Enemies.Clear();
-        var enemyList = await DBHelper.GetEnemiesAsync(CurrentPage, Search);
-
-        if (enemyList.Count > 0)
+        try
         {
-            foreach (var enem in enemyList)
+            foreach (var enem in await DBHelper.GetEnemiesAsync(CurrentPage, Search))
             {
                 Enemies.Add(enem);
                 Console.WriteLine(Enemies.Count);
             }
         }
-        else
+        catch (Exception ex)
         {
-            await Shell.Current.DisplayAlert("Ошибка", "Ничего не найдено", "OK");
+            if (ex.Message.Contains("хост неизвестен"))
+            {
+                await Shell.Current.DisplayAlert("Ошибка", "Отсутствует подключение к интернету", "ОК");
+            }
+            else
+            {
+                await Shell.Current.DisplayAlert("Ошибка",ex.Message,"OK");
+            }
         }
-        
     }
 
     [RelayCommand]
